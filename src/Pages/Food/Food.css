@@ -1,0 +1,66 @@
+.selected{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    margin: 30px 50px;
+}
+
+.selected img{
+    width: 100%;
+}
+
+.img-container{
+    border: 1px solid rgb(122, 122, 122);
+    border-radius: 4px;
+    padding: 10px;
+    margin: auto;
+    text-align: center;
+}
+
+.selected div:last-child{
+    border-radius: 4px;
+    padding: 20px;
+    margin-right: 80px;
+    padding: 15px 25px;
+}
+
+
+.item-details, .item-price{
+    text-align: left;
+    font-size: 17px;
+    margin-left: 100px;
+    color: rgb(158, 158, 158);
+}
+
+.item-name{
+    text-align: left;
+    font-size: 25px;
+    color: rgb(85, 85, 85);
+    margin-left: 100px;
+}
+
+.selected span {
+    color: brown;
+}
+
+.item-price{
+    font-size: 1.5rem;
+}
+
+.selected hr{
+    margin-left: 100px;
+    color: cadetblue;
+}
+
+.quantity{
+    text-align: left;
+    margin-left: 80px;
+    width: 20%;
+}
+
+.quantity-value{
+    padding: 8px 20px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    justify-content: center;
+    align-items: center;
+}

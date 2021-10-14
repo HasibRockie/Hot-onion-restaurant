@@ -1,0 +1,20 @@
+.home-head{
+    width: 50%;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-head-container{
+    display: flex;
+    margin-top: 0px;
+    background-image: url('./bannerbackground.png');
+    min-height: 600px;
+    background-size: cover;
+    background-position-x: center;
+    background-repeat: no-repeat;
+}
+
+.banner-title{
+    margin-bottom: 30px;
+}

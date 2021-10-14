@@ -1,0 +1,24 @@
+.blogs{
+    text-align: justify;
+}
+
+.blogs-decription{
+    color: gray;
+    font-size: 0.8 rem;
+    font-size: small;
+}
+
+.item-title{
+    color: rgb(82, 82, 82);
+    font-size: 1 rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.blogs img{
+    width: 100%;
+}
+
+.blogs-container h1{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-top: 40px;
+}

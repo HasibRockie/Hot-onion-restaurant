@@ -1,0 +1,38 @@
+[
+  {
+    "id": 301,
+    "name": "Salmon with Grapefruit and Lentil salad",
+    "image": "https://i.ibb.co/Sn7D3CY/dinner1.png",
+    "price": "9.99"
+  },
+  {
+    "id": 302,
+    "name": "Lemony Salmon Piccata",
+    "image": "https://i.ibb.co/5hZBycb/dinner2.png",
+    "price": "10.99"
+  },
+  {
+    "id": 303,
+    "name": "Pork Tenderloin With Quinoa Pilaf",
+    "image": "https://i.ibb.co/QYp807f/dinner3.png",
+    "price": "12.99"
+  },
+  {
+    "id": 304,
+    "name": "French fries with cheese",
+    "image": "https://i.ibb.co/W0Y5NZ2/dinner4.png",
+    "price": "8.99"
+  },
+  {
+    "id": 305,
+    "name": "Garlic Butter Baked Salmon",
+    "image": "https://i.ibb.co/DrSfvp5/dinner5.png",
+    "price": "6.99"
+  },
+  {
+    "id": 306,
+    "name": "Baked Chicken",
+    "image": "https://i.ibb.co/5Fy7wpX/dinner6.png",
+    "price": "9.99"
+  }
+]

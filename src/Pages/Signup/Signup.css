@@ -1,0 +1,42 @@
+.signup .form-control{
+    margin: auto;
+    background-color: rgb(245, 223, 217) !important;
+}
+
+.signup img{
+    width: 300px; 
+    padding-bottom: 50px ;
+}
+
+.signup{
+    margin: 50px 20px ;
+    padding:30px 300px;
+}
+
+.signup-inner{
+    width: 50% ;
+    margin: auto;
+    background-color: rgb(247, 247, 247);
+    padding: 100px 40px 40px;
+    border-radius: 4px;
+    box-shadow: 1px 1px 6px gray;
+}
+
+.signup input{
+    border: 0.1px;
+    /* color: rgb(255, 246, 246); */
+}
+
+.signup a{
+    color: rgb(77, 77, 77);
+    text-decoration: none;
+    
+}
+
+.signup a:hover{
+    color: rgb(61, 61, 61);
+}
+
+.signup p{
+    margin-top: 25px ;
+}

@@ -1,0 +1,43 @@
+.items-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    margin: 20px auto;
+    padding: 30px 100px;
+}
+
+.items-container img {
+    width: 70%;
+    margin-bottom: 30px;
+}
+
+.item{
+    /* border: 0.2px solid black; */
+    border-radius: 4px;
+    margin: 20px;
+    padding: 15px;
+    box-sizing: border-box;
+    transition: 400ms;
+}
+
+.item a{
+    text-decoration: none;
+    color: rgb(133, 133, 133);
+}
+
+.item a:hover{
+    text-decoration: none;
+    color: rgb(133, 133, 133);
+}
+
+.item:hover{
+    border-radius: 4px;
+    margin: 20px;
+    padding: 15px;
+    box-sizing: border-box;
+    box-shadow: 3px 3px 15px rgb(148, 148, 148);  
+    transition: 400ms;
+}
+
+.item-name{
+    color: dimgrey;
+}

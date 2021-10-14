@@ -1,0 +1,15 @@
+.alternative{
+    display: grid;
+    grid-template-columns: 3fr 1fr 3fr;
+    justify-content: center;
+}
+
+.alternative hr{
+    border-top: 2px solid rgb(92, 92, 92);
+    width: 100%;
+}
+
+.sign-in-button{
+    display: flex;
+    justify-content: space-between;
+}

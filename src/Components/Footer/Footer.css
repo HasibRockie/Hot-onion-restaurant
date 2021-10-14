@@ -1,0 +1,55 @@
+.footer{
+    background-color: black;
+    color: white;
+    padding: 80px 10px 30px;
+}
+
+.footer-1 img{
+    width: 200px;
+}
+
+.footer-1{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+
+.footer-2{
+    display: grid;
+    margin-top: 40px;
+    grid-template-columns: repeat(2,1fr);
+}
+
+.final-footer a{
+    margin-left: 30px;
+}
+
+.footer li {
+    list-style: none;
+    text-align: left;
+}
+
+.footer a{
+    text-decoration: none;
+    color: rgb(170, 170, 170);
+}
+
+.footer a:hover{
+    color: white;
+}
+
+.copyright{
+    color: rgb(156, 138, 134);
+    font-weight: 800;
+    text-align: left;
+    margin-left: 100px;
+}
+
+.copyright:last-child{
+    color: rgb(156, 138, 134);
+    font-weight: 800;
+    font-size: 0.7rem;
+}
+
+.copyright span{
+    color: wheat;
+}
