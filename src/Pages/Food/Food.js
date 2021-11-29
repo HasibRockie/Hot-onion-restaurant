@@ -4,12 +4,14 @@ import "./Food.css";
 import { useState } from "react";
 import { useEffect } from "react";
 import { ButtonGroup, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
+import FirebaseAuth from "./../../Firebase/Firebase.authentication";
 
 const Food = () => {
+  let { increase, decrease, quantity } = FirebaseAuth();
   const { slug } = useParams();
-  const [selected, setSelected] = useState([]);
   const intSlug = parseInt(slug);
-  const [quantity, setQuantity] = useState(1);
+  const [selected, setSelected] = useState([]);
 
   useEffect(() => {
     fetch("../APIs/foodItems.json")
@@ -18,23 +20,11 @@ const Food = () => {
         data.forEach((item) => {
           if (item.id === intSlug) {
             setSelected(item);
-            console.log("matched");
           }
         });
       });
 
-    console.log(selected);
   }, []);
-
-  const increase = () => {
-      setQuantity(quantity+1)
-  };
-
-  const decrease = () => {
-      if(quantity>1){
-          setQuantity(quantity-1)
-      }
-  };
 
   return (
     <div className="selected">
@@ -64,7 +54,9 @@ const Food = () => {
             </Button>
           </ButtonGroup>
 
-          <Button variant="danger">Place Order </Button>
+          <Button as={Link} to="/placeorder" variant="danger">
+            Place Order
+          </Button>
         </div>
       </div>
     </div>

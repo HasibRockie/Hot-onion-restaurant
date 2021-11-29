@@ -20,6 +20,9 @@ const FirebaseAuth = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loggedIn, setLoggedIn] = useState(false);
+  const [quantity, setQuantity] = useState(1);
+
+
   const googleProvider = new GoogleAuthProvider();
   const githubProvider = new GithubAuthProvider();
 
@@ -35,7 +38,21 @@ const FirebaseAuth = () => {
         setEmail(email);
       }
     });
-  }, []);
+  }, [loggedIn]);
+
+// increase quantity 
+const increase = () => {
+  setQuantity(quantity+1)
+};
+
+// decrease quantity 
+const decrease = () => {
+  if(quantity>1){
+      setQuantity(quantity-1)
+  }
+};
+
+
 
   //    function for getting values from input field
   const getName = (e) => {
@@ -56,14 +73,13 @@ const FirebaseAuth = () => {
   const register = () => {
     createUserWithEmailAndPassword(auth, email, password)
       .then((result) => {
-        const userProfile = result.user;
         setUser(result.user);
         setEmail(email);
         setName(name);
         setLoggedIn(true);
       })
       .catch((error) => {
-        const errorCode = error.code;
+        // const errorCode = error.code;
         const errorMessage = error.message;
         console.log(errorMessage);
       });
@@ -81,8 +97,8 @@ const FirebaseAuth = () => {
         console.log("successful");
       })
       .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
+        // const errorCode = error.code;
+        // const errorMessage = error.message;
         console.log("failed");
       });
     history.push("/");
@@ -92,19 +108,19 @@ const FirebaseAuth = () => {
 const googleSignIn = () => {
     signInWithPopup(auth, googleProvider)
   .then((result) => {
-    const credential = GoogleAuthProvider.credentialFromResult(result);
-    const token = credential.accessToken;
-    const userProfile = result.user;
+    // const credential = GoogleAuthProvider.credentialFromResult(result);
+    // const token = credential.accessToken;
+    // const userProfile = result.user;
     setUser(result.user)
     setLoggedIn(true)
     setName(result.user.displayName)
     setEmail(result.user.email)
     history.push('/')
   }).catch((error) => {
-    const errorCode = error.code;
-    const errorMessage = error.message;
-    const email = error.email;
-    const credential = GoogleAuthProvider.credentialFromError(error);
+    // const errorCode = error.code;
+    // const errorMessage = error.message;
+    // const email = error.email;
+    // const credential = GoogleAuthProvider.credentialFromError(error);
   });
 }
 
@@ -113,19 +129,19 @@ const googleSignIn = () => {
 const githubSignIn = () => {
     signInWithPopup(auth, githubProvider)
   .then((result) => {
-    const credential = GithubAuthProvider.credentialFromResult(result);
-    const token = credential.accessToken;
-    const userProfile = result.user;
+    // const credential = GithubAuthProvider.credentialFromResult(result);
+    // const token = credential.accessToken;
+    // const userProfile = result.user;
     setUser(result.user)
     setName(result.user.displayName)
     setEmail(result.user.email)
     setLoggedIn(true)
     history.push("/")
   }).catch((error) => {
-    const errorCode = error.code;
-    const errorMessage = error.message;
-    const email = error.email;
-    const credential = GithubAuthProvider.credentialFromError(error);
+    // const errorCode = error.code;
+    // const errorMessage = error.message;
+    // const email = error.email;
+    // const credential = GithubAuthProvider.credentialFromError(error);
   });
 }
 
@@ -138,10 +154,14 @@ const githubSignIn = () => {
       .then(() => {
         setUser({});
         setLoggedIn(false);
+        setName('')
+        setEmail('')
+        setPassword('')
       })
       .catch((error) => {
         // An error happened.
       });
+      history.push("/")
   };
 
   return {
@@ -157,7 +177,10 @@ const githubSignIn = () => {
     user,
     logout,
     googleSignIn,
-    githubSignIn
+    githubSignIn,
+    quantity,
+    increase,
+    decrease,
   };
 };
 
